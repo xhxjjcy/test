@@ -1,0 +1,28 @@
+server:
+  port: 8011
+    #servlet:
+     # context-path: /mode
+spring:
+#服务名
+  application:
+    name: config
+  profiles:
+    active: subversion
+    cloud:
+      config:
+        server:
+          svn:
+            uri: https://192.168.3.97/svn/SourceCode/SMPH/Beats/trunk/test/config
+            #username: *****
+            #password: *****
+            default-label:
+#是否将自己注册到 Eureka-Server 中，默认的为 true
+eureka:
+   client:
+     service-url:
+       defaultZone: http://localhost:8100/eureka/
+   instance:
+     preferIpAddress: true
+     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+     lease-expiration-duration-in-seconds: 30
+     lease-renewal-interval-in-seconds: 30
