@@ -1,4 +1,4 @@
-package com.test;
+package com.mode;
 
 
 import org.springframework.boot.SpringApplication;

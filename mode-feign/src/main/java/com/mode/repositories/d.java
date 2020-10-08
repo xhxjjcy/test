@@ -1,4 +1,4 @@
 package com.mode.repositories;
 
-public class wedf {
+public class d {
 }
