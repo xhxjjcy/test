@@ -27,7 +27,7 @@ public class UserApl {
 
     @GetMapping("/{id}")
     public RestResponse userById(@PathVariable("id") Integer id){
-        log.info("234567890");
+        log.info("2345678901");
         return ResultUtils.setOk(userService.userById(id));
     }
 
